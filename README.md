@@ -6,37 +6,6 @@ TaskFlow is a beginner-friendly full-stack task management web application devel
 
 The project demonstrates the implementation of RESTful APIs, CRUD operations, database integration using MongoDB, and communication between the frontend and backend. It is designed to help beginners understand the fundamentals of full-stack web development while building a practical real-world application.
 
----
-
-## Features
-
-- Create project boards
-- View all existing boards
-- Delete boards
-- Create tasks inside a board
-- View tasks for a selected board
-- Update task details
-- Delete tasks
-- Responsive user interface
-- MongoDB database integration
-- REST API based backend
-
----
-
-## Technologies Used
-
-### Frontend
-- HTML5
-- CSS3
-- JavaScript
-
-### Backend
-- Node.js
-- Express.js
-
-### Database
-- MongoDB
-- Mongoose
 
 ---
 
