@@ -1,0 +1,53 @@
+@media (max-width: 900px) {
+  .task-board {
+    flex-direction: column;
+  }
+
+  .board-card {
+    width: calc(50% - 9px);
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .home-main,
+  .page-container {
+    padding: 28px 16px;
+  }
+
+  .hero-section {
+    min-height: auto;
+    padding: 30px 0;
+  }
+
+  .hero-text h1 {
+    font-size: 28px;
+  }
+
+  .welcome-heading {
+    font-size: 16px;
+  }
+
+  .board-card {
+    width: 100%;
+  }
+
+  .button {
+    text-align: center;
+    width: 100%;
+  }
+}

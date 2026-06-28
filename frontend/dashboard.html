@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TaskFlow</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="board.html">Board</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="page-title">
+      <h1>Dashboard</h1>
+      <p>Create and view simple project boards.</p>
+    </section>
+
+    <section class="form-section">
+      <h2>Create Board</h2>
+      <form id="boardForm" class="simple-form">
+        <div class="form-group">
+          <label for="boardTitle">Board Title</label>
+          <input type="text" id="boardTitle" placeholder="Example: College Project" required>
+        </div>
+
+        <div class="form-group">
+          <label for="boardDescription">Description</label>
+          <textarea id="boardDescription" placeholder="Write a short description"></textarea>
+        </div>
+
+        <button type="submit" class="button primary-button">Create Board</button>
+      </form>
+    </section>
+
+    <section class="boards-section">
+      <h2>All Boards</h2>
+      <p id="boardMessage" class="message"></p>
+      <div id="boardsContainer" class="boards-container"></div>
+    </section>
+  </main>
+
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

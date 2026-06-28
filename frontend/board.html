@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Board</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/board.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="index.html" class="logo">TaskFlow</a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="board.html">Board</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-container">
+    <section class="page-title">
+      <h1>Task Board</h1>
+      <p>Add tasks and move them between simple status columns.</p>
+    </section>
+
+    <section class="form-section">
+      <h2>Add Task</h2>
+      <form id="taskForm" class="simple-form">
+        <div class="form-group">
+          <label for="taskTitle">Task Title</label>
+          <input type="text" id="taskTitle" placeholder="Example: Design homepage" required>
+        </div>
+
+        <div class="form-group">
+          <label for="taskDescription">Description</label>
+          <textarea id="taskDescription" placeholder="Write task details"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="taskStatus">Status</label>
+          <select id="taskStatus">
+            <option value="To Do">To Do</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Done">Done</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button primary-button">Add Task</button>
+      </form>
+    </section>
+
+    <p id="taskMessage" class="message"></p>
+
+    <section class="task-board">
+      <div class="task-column">
+        <h2>To Do</h2>
+        <div id="todoTasks" class="task-list"></div>
+      </div>
+
+      <div class="task-column">
+        <h2>In Progress</h2>
+        <div id="progressTasks" class="task-list"></div>
+      </div>
+
+      <div class="task-column">
+        <h2>Done</h2>
+        <div id="doneTasks" class="task-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/board.js"></script>
+</body>
+</html>

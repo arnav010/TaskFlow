@@ -1,0 +1,33 @@
+.boards-section h2 {
+  margin-bottom: 14px;
+}
+
+.boards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.board-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 190px;
+  width: calc(33.333% - 12px);
+}
+
+.board-card h3 {
+  color: #222222;
+  font-size: 20px;
+}
+
+.board-card p {
+  color: #555555;
+  flex: 1;
+}
+
+.board-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
