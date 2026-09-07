@@ -14,7 +14,7 @@ TaskFlow is a MERN task management app where users can register, login, create b
 
 - **Frontend:** [TaskFlow Frontend](https://task-app-phi-flax.vercel.app)
 - **Backend:** [TaskFlow Backend](https://task-app-o5mt.onrender.com)
-- **GitHub Repository:** [ayushyadu25/task-app](https://github.com/ayushyadu25/task-app)
+
 
 
 ## Tech Stack
