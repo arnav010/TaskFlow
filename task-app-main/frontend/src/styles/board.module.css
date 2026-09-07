@@ -1,0 +1,265 @@
+.boardPage {
+  display: grid;
+  gap: 1rem;
+}
+
+.boardHeader {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.boardHeader h1 {
+  margin: 0.2rem 0;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1;
+  overflow-wrap: anywhere;
+}
+
+.boardHeader p:not(:global(.eyebrow)) {
+  max-width: 52rem;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+  color: var(--muted);
+  font-weight: 800;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: end;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 0.75rem;
+}
+
+.toolbar label {
+  flex: 1 1 180px;
+  min-width: 180px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+.column {
+  display: grid;
+  gap: 0.75rem;
+  min-height: 22rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  padding: 0.75rem;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.columnHeader h2 {
+  font-size: 1rem;
+}
+
+.columnHeader span {
+  display: grid;
+  min-width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  font-weight: 900;
+}
+
+.taskList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.emptyColumn {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  color: var(--muted);
+  padding: 1rem;
+  text-align: center;
+}
+
+.taskCard {
+  display: grid;
+  gap: 0.75rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 0.85rem;
+}
+
+.taskCard.overdue {
+  border-left-color: var(--danger);
+}
+
+.taskHeader {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.5rem;
+}
+
+.taskHeader h3 {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.priority {
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 0.25rem 0.48rem;
+  text-transform: uppercase;
+}
+
+.high {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.medium {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.low {
+  background: var(--success-soft);
+  color: var(--success);
+}
+
+.taskDescription {
+  color: var(--muted);
+  font-size: 0.93rem;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.taskMeta {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.taskMeta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.taskActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+@media (max-width: 980px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .boardHeader {
+    display: grid;
+    align-items: stretch;
+  }
+
+  .boardHeader h1 {
+    font-size: clamp(1.8rem, 12vw, 2.4rem);
+  }
+
+  .backLink {
+    margin-bottom: 0.35rem;
+  }
+
+  .toolbar {
+    display: grid;
+    gap: 0.65rem;
+    padding: 0.65rem;
+  }
+
+  .toolbar label {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .columns {
+    gap: 0.8rem;
+  }
+
+  .column {
+    min-height: auto;
+    padding: 0.65rem;
+  }
+
+  .columnHeader {
+    position: sticky;
+    top: 6.9rem;
+    z-index: 5;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    padding: 0.55rem 0.65rem;
+  }
+
+  .taskList {
+    gap: 0.65rem;
+  }
+
+  .taskCard {
+    gap: 0.65rem;
+    padding: 0.8rem;
+  }
+
+  .taskHeader {
+    grid-template-columns: 1fr;
+  }
+
+  .priority {
+    justify-self: start;
+  }
+
+  .taskMeta {
+    font-size: 0.84rem;
+  }
+
+  .taskActions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .taskActions :global(.icon-button) {
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .taskActions {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
